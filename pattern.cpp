@@ -246,30 +246,153 @@ int main()
     // }
 
     // p-17
-    for (int i = 0; i < 5; i++)
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     for (int j = 0; j < 5 - i - 1; j++)
+    //     {
+    //         cout << " ";
+    //     }
+
+    //     char ch = 'A';
+    //     int bp = (2 * i + 1) / 2;  // isme ye imp hai
+    //     for (int j = 1; j <=2 * i+1; j++)
+    //     {
+    //         cout << ch;
+    //         if (j <= bp)
+    //             ch++;
+    //         else
+    //             ch--;
+    //     }
+
+    //     for (int j = 0; j < 5 - i - 1; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    // p-18
+    // for (int i = 0; i <5; i++)
+    // {
+
+    //     for (char ch = 'E' - i; ch<='E'; ch++)
+    //     {
+    //         cout <<ch << " ";
+    //     }
+    //     cout << endl;
+
+    // }
+
+    // p-19
+    // int spaces = 0;
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     // star
+    //     for (int j = 1; j <= 5 - i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+
+    //     // space
+    //     for (int j = 0; j < spaces; j++)
+    //     {
+    //         cout << " ";
+    //     }
+
+    //     // star
+    //     for (int j = 1; j <= 5 - i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+
+    //     spaces += 2;
+    //     cout << endl;
+    // }
+
+    // 2nd way
+    // int inis = 2*5-2;
+    // for (int i = 1; i <=5; i++)
+    // {
+    //     // star
+    //     for (int j = 1; j <= i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+
+    //     // space
+    //     for (int j = 0; j < inis; j++)
+    //     {
+    //         cout << " ";
+    //     }
+
+    //     // star
+    //     for (int j = 1; j <=i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     inis -= 2;
+    //     cout << endl;
+    // }
+
+    // p-20
+    // int spaces = 2 * 5 - 2;
+    // for (int i = 1; i <= 2 * 5 - 1; i++)
+    // {
+    //     int stars = i;
+    //     if (i > 5) stars = 2 * 5 - i;
+    //     for (int j = 1; j <= stars; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     for (int j = 1; j <=spaces; j++)
+    //     {
+    //         cout << " ";
+    //     }
+
+    //     for (int j = 1; j <=stars; j++)
+    //     {
+    //         cout << "*";
+    //     }
+
+    //     cout << endl;
+    //     if (i < 5)
+    //         spaces -= 2;
+    //     else
+    //         spaces += 2;
+    // }
+
+    // p-21
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     for (int j = 0; j < 5; j++)
+    //     {
+    //         if (i == 0 || j == 0 || i == 5 - 1 || j == 5 - 1)
+    //         {
+    //             cout << "*";
+    //         }
+    //         else
+    //             cout << " ";
+    //         }
+    //         cout << endl;
+    // }
+
+    // p-22
+    for (int i = 0; i <2*4-1; i++)
     {
-        for (int j = 0; j < 5 - i - 1; j++)
+        for (int j = 0; j <2*4-1; j++)
         {
-            cout << " ";
-        }
+            int top = i;
+            int left = j;
+            int right = (2*4-2) - j;
+            int down = (2*4-2) - i;
+            cout << (4-min(min(top, down), min(left,right)));
 
-        char ch = 'A';
-        int bp = (2 * i + 1) / 2;  // isme ye imp hai
-        for (int j = 1; j <=2 * i+1; j++)
-        {
-            cout << ch;
-            if (j <= bp)
-                ch++;
-            else
-                ch--;
-        }
-
-        for (int j = 0; j < 5 - i - 1; j++)
-        {
-            cout << " ";
+            
         }
         cout << endl;
+        
     }
+    
 
     return 0;
 }
